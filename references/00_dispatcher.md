@@ -51,13 +51,13 @@ Apply Trade rule 1. Tag every sentence that states a fact, advice or experience,
 - `[S]` advice, criteria, own-business terms or entity facts (Step 2) the SME stated but did not observe, including the reasons, conditions and limits given for them ("will not fix X", "some models do not allow it"), a conditional effect given as advice ("more RAM can help if ...") and a likely cause the SME gives for a symptom (a reason may be implicit: an adjacent sentence that explains why to follow the advice, such as "it is off by default" beside "turn it on", even with an unopened "see <link>" after it); never counts as experience
 - `[R]` a named reviewer's clearance logged under Step 8 (source "reviewer, <date>"), or the notes themselves attribute the claim to a named other party (manufacturer, supplier, client); name that party in the same sentence, or by role ("the owner") where Trade rule 1 bars naming a client. A hyperlink or link text alone is not attribution: the claim is `[B]` if the agent opens the linked page and it states the claim, otherwise tagged as if the link were absent
 - `[B]` baseline fact from a named public source (URL and date) that the agent opened
-- `[U]` unverified, including a general fact the SME states (a risk, an effect, how something works) without observing it, attributing it, or giving it as the reason, condition or limit (stated or implicit) for their advice, or as a warning about the reader's own risk that names no product, service, brand or category (one that names one: Trade rule 6)
+- `[U]` unverified: a general fact the SME states (a risk, an effect, how something works) that is not observed, not attributed, and not given as advice, as a diagnosis (a likely cause for a symptom), as the reason, condition or limit (stated or implicit) for their advice, or as a warning about the reader's own risk. Those are `[S]`, unless the warning names a rival or a category of rivals (Trade rule 6)
 
 ### 4. Baseline block
 List the baseline items (Definitions); Trade rule 3 governs what is left out. Keep it clean, sourced and dated.
 
 ### 5. Insight extraction
-For each item the SME used, answer from the notes only (rival cautions: Trade rule 6): where would you use it, where would you avoid it, what surprised you. An answer the notes lack becomes `[SME Input Needed: <question>]`. An item goes under "Not tested" only when the notes say the SME did not use it; any other item the notes do not show in use gets `[SME Input Needed: did you use <item>?]`. Neither is described as if used.
+Skip this step for thin notes (Step 1); their one marker covers every item. For each item the SME used, answer from the notes only (rival cautions: Trade rule 6): where would you use it, where would you avoid it, what surprised you. An answer the notes lack becomes `[SME Input Needed: <question>]`. An item goes under "Not tested" only when the notes say the SME did not use it; any other item the notes do not show in use gets `[SME Input Needed: did you use <item>?]`. Neither is described as if used.
 
 ### 6. Proof and stance
 - **Context or stance line** (order: Output shapes) is one sentence: the SME's own stated verdict or deciding criterion (`[S]`, or an opened `[B]` source for a rival caution), else the topic as the notes state it; never a verdict the sources below lack.
@@ -83,14 +83,14 @@ Run these checks on the tagged draft. Strip the tags for PUBLISH-READY only afte
 
 Open with a **Status** line: `State: DRAFT | PUBLISH-READY; YMYL: no | yes (reviewer) | yes (source only, no advice) | yes (reviewer pending); Disclosure: no | yes (line); Voice: first person | team | named attribution | third person; Approval: none | approved <date> by <name or role>[, in chat]`.
 
-- **DRAFT**: shows each sentence's tag and ledger row ID inline, such as `[S3]` (tags, row IDs, markers and marker numbers are not process notes), and may hold markers and `[U]`. A marker clears only when the user or SME supplies the answer or asset in this conversation or a named note, or when the claim it backs is withheld at request or deleted, which the Withheld list records; log it with the tag its content earns (Step 3) and the source "SME answer, <date>". Never clear a marker with plausible prose.
+- **DRAFT**: shows each sentence's tag and ledger row ID inline, such as `[S3]` (tags, row IDs, markers and marker numbers are not process notes), and may hold markers and `[U]`. A marker clears only when the user or SME supplies the answer or asset in this conversation or a named note, or when the claim it backs is withheld at request or deleted, which the Withheld list records; log it with the tag its content earns (Step 3) and that tag's source: "SME answer, <date>"; for `[B]` the URL and date; for `[R]` "reviewer, <date>". Never clear a marker with plausible prose.
 - **PUBLISH-READY**: every Step 8 check passes, with zero markers, zero `[U]` and no gate left unrun; the published text holds no tag or row ID.
 - **Blockers** has two lists. BLOCKING: every open marker, every `[U]` claim, every gate that did not run, a pending reviewer, and a pending first-person approval when the user asked for first person; any BLOCKING item holds the piece at DRAFT. NOTES (never block): unanswered intake questions whose answers could not change a published line, the jurisdiction default, and other process remarks.
 - The Claims ledger is delivered to the user and never published. It has a numbered row for every tagged sentence (one row covers several only when all share its tag; each then shows that tag and one ID, never a range, and the row gives their count), then the Withheld list (Trade rule 3).
 - Add no section or stub line outside the chosen shape (the Trade rule 4 "Prices as of" line belongs to the baseline block, or to the entity facts on an entity page), and no legend or preface line between Status and the headline. Headings use plain reader words, never skill terms ("Baseline block"). No line or heading meant for publication (everything except Status, Blockers and the Claims ledger) holds a process note (how wording was handled, review, approval or YMYL status, which sources were opened, note or save dates); those go under NOTES or in the Claims ledger.
 
 Shapes, by case:
-- **Experiential page:** Status; headline; context or stance line; disclosure line (if needed); baseline block; per-item insight (use / avoid / surprise) with proof inline; Not tested (if any); Blockers; Claims ledger (claim, tag, source; for proof, who supplied it).
+- **Experiential page:** Status; headline; context or stance line; disclosure line (if needed); baseline block; per-item insight (use / avoid / surprise) with proof inline; Not tested (if any); Blockers; Claims ledger (claim, tag, source; for proof, who supplied it and what the user says it shows).
 - **Entity page:** Status; headline; disclosure line (if needed); entity facts; Blockers; Claims ledger.
 - **Thin notes:** Status; headline; context line (verbatim from the notes, no verdict; on a YMYL page, <Name> advises: "<the verbatim words>"); disclosure line (if needed); baseline block; Blockers (BLOCKING, with the `[SME Input Needed: ...]` list, and NOTES); Claims ledger.
 
@@ -123,7 +123,7 @@ Sam Reed advises: "Try these checks before you book a repair." [S1]
 - Sam advises you ask for the cost after diagnosis rather than assuming every repair is the same. [S7] It depends on the part: a clean may be quick, while a fan replacement takes longer. [S8] Sam advises you see the Prices page. [S9]
 BLOCKING: YMYL reviewer pending; [SME Input Needed: your price bracket and its date]; [SME Input Needed: what have you seen on hot laptops?]
 NOTES: none.
-Ledger: one row per tag, e.g. 8 | "It depends on the part ..." | [S] | Sam Reed notes, <date>
+Ledger: one row per tagged sentence, e.g. 8 | "It depends on the part ..." | [S] | Sam Reed notes, <date>
 Withheld: FAQ "A hard surface can help.": repeats row 5. Footer "Prices": repeats row 9.
 ```
 What it shows:
