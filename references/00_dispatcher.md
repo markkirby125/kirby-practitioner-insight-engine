@@ -48,7 +48,7 @@ Ask the user: Where are the notes (source and date)? What page type? Who is the 
 
 ### 3. Redact, tag and date sources
 Apply Trade rule 1. Tag every sentence that states a fact, advice or experience (a heading counts as a sentence when it says what its section does not), one tag per sentence (split a sentence that mixes sources); a tag never carries over to a neighbouring sentence, a heading or a whole step. A multi-sentence bullet repeats its tag and row ID after each sentence, and a step-title or lead-in sentence has its own tag. A verbatim quote is one unit with one tag; never split it:
-- `[N]` the SME saw or did it: a described event or result (first-hand, from the notes)
+- `[N]` the SME saw or did it: a described event or result, or the note that they did not use it (first-hand, from the notes)
 - `[S]` SME-stated advice, criteria, own-business terms or entity facts (Step 2) that the SME wrote but did not observe, including the reasons and conditions the SME gives for them and a likely cause the SME gives for a symptom (a reason may be implicit: an adjacent sentence that explains why to follow the advice, such as "it is off by default" beside "turn it on", even with an unopened "see <link>" after it); never counts as experience
 - `[R]` the notes themselves attribute the claim to a named other party (manufacturer, supplier, client); name that party in the same sentence. A hyperlink or link text alone is not attribution: the claim is `[B]` if the agent opens the linked page and it states the claim, otherwise tagged as if the link were absent, so a "see <link>" pointer never demotes a fact the SME states
 - `[B]` baseline fact from a named public source (URL and date; the agent must have opened the source)
@@ -58,10 +58,10 @@ Apply Trade rule 1. Tag every sentence that states a fact, advice or experience 
 List price or cost bracket, target use cases, features or steps, pros and cons; Trade rule 3 governs what is left out and the Withheld list. Keep it clean, sourced and dated.
 
 ### 5. Insight extraction
-For each item the SME used, answer from the notes only: where would you use it, where would you avoid it, what surprised you. An answer the notes lack becomes `[SME Input Needed: <question>]`. An item goes under "Not tested" only when the notes say the SME did not use it; any other item the notes do not show in use gets `[SME Input Needed: did you use <item>?]`. Neither is described as if used. A Not tested line is `[N]`, from the note that says it was not used.
+For each item the SME used, answer from the notes only (a rival caution may instead rest on an opened `[B]` source, Trade rule 6): where would you use it, where would you avoid it, what surprised you. An answer the notes lack becomes `[SME Input Needed: <question>]`. An item goes under "Not tested" only when the notes say the SME did not use it; any other item the notes do not show in use gets `[SME Input Needed: did you use <item>?]`. Neither is described as if used. A Not tested line is `[N]`, from the note that says it was not used.
 
 ### 6. Proof and stance
-- **Order (experiential page body only):** headline, context or stance line, disclosure, baseline block, insight. The context or stance line is one sentence: the SME's own stated verdict or deciding criterion (`[S]`), else the topic as the notes state it; never a verdict the notes lack.
+- **Order (experiential page body only):** headline, context or stance line, disclosure, baseline block, insight. The context or stance line is one sentence: the SME's own stated verdict or deciding criterion (`[S]`, or `[B]` where it rests on an opened source), else the topic as the notes state it; never a verdict the notes lack.
 - Place each proof item inline beside its claim. List only the missing assets as `[ASSET: <what>]`. Never describe an asset as present unless the user supplied it.
 - A stance comes from a note or from a criterion the SME stated in a note; a rival caution may instead rest on an opened `[B]` source (Trade rule 6). With none of these, write `[SME Input Needed: verdict on X]`. "It depends" is allowed only when followed by the SME's actual deciding condition.
 
