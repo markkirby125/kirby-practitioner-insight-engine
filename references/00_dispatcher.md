@@ -57,7 +57,7 @@ Apply Trade rule 1. Tag every sentence that states a fact, advice or experience,
 List the baseline items (Definitions); Trade rule 3 governs what is left out. Keep it clean, sourced and dated.
 
 ### 5. Insight extraction
-Skip this step for thin notes (Step 1); their one marker covers every item. For each item the SME used, answer from the notes only (rival cautions: Trade rule 6): where would you use it, where would you avoid it, what surprised you. An answer the notes lack becomes `[SME Input Needed: <question>]`. An item goes under "Not tested" only when the notes say the SME did not use it; any other item the notes do not show in use gets `[SME Input Needed: did you use <item>?]`. Neither is described as if used.
+Skip this step for thin notes (Step 1); their one marker covers every item. For each item the SME used, answer from the notes only (rival cautions: Trade rule 6): where would you use it, where would you avoid it, what surprised you. Put first-hand details in the per-item insight (and the Not tested list), never in the baseline block (Step 4), and only where the notes or a logged SME answer document them; tag them under Step 3 and never invent failure modes, surprises or test outcomes. An answer the notes lack becomes `[SME Input Needed: <question>]`. An item goes under "Not tested" only when the notes say the SME did not use it; any other item the notes do not show in use gets `[SME Input Needed: did you use <item>?]`. Neither is described as if used.
 
 ### 6. Proof and stance
 - **Context or stance line** (order: Output shapes) is one sentence: the SME's own stated verdict or deciding criterion (`[S]`, or an opened `[B]` source for a rival caution), else the topic as the notes state it; never a verdict the sources below lack.
