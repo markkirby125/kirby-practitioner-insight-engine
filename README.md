@@ -9,7 +9,7 @@ Copy and paste this into any AI coding app (Cursor, Windsurf, Claude Code, Grok,
 
 ```markdown
 @agent Install the Practitioner Insight Engine skill from: https://github.com/markkirby125/kirby-practitioner-insight-engine
-1. Confirm the repo resolves and the files match the Files listing in its README before installing.
+1. Confirm the repo resolves and the files match the Files listing in its README before installing, and install from a specific commit SHA the owner names rather than a moving branch when integrity matters.
 2. Read `SKILL.md` and `references/` from the repository.
 3. Place into your environment's skills/rules directory preserving the dispatcher structure.
 4. Confirm when installation is complete.
