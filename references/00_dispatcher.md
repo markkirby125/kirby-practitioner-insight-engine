@@ -35,7 +35,7 @@
 
 ### 1. Intake gate
 Ask the user: Where are the notes (source and date)? What page type? Who is the named author, and has that person approved first-person use (date and channel)? Has each named person (author, SME, reviewer) agreed to be named, and has each person in a photo agreed to its use? Which sources give prices and metrics? Which screenshots or photos exist? Is client consent on file? Is the topic YMYL, and if so who is the qualified reviewer and what credential do they hold? Does anything need a disclosure line?
-- **No notes (an empty notes file counts) and no SME answer in this conversation:** STOP. Ask the questions above and write nothing until the SME answers; an answer logged under Step 8 then counts as the source. An entity page built only from a named, dated `[B]` source is exempt.
+- **No notes (an empty notes file counts) and no SME answer in this conversation:** STOP. Ask the questions above and write nothing until the SME answers; an answer logged under Step 8 then counts as the source. An entity page built only from a named, dated `[B]` source the agent can open is exempt; when the user names a register without a URL, ask for the URL (Trade rule 7) and write nothing until it arrives.
 - **Notes present but intake answers missing:** proceed. An unanswered question whose answer could change a published line becomes a marker (BLOCKING; if unsure, it blocks); an unnamed source for a price, metric or date the piece states always could, unless the notes state the author's own published rates with a date (Trade rule 4). Any other, such as approval when the user did not ask for first person, goes under NOTES.
 - **Thin notes** (experiential page only; zero first-hand observations and no note saying an item was not used; if some items have observations, use the experiential shape with a marker for each missing item): deliver the Thin-notes shape with no insight section (see the worked example).
 
@@ -92,7 +92,7 @@ Open with a **Status** line: `State: DRAFT | PUBLISH-READY; YMYL: no | yes (revi
 Shapes, by case:
 - **Experiential page:** Status; headline; context or stance line; disclosure line (if needed); baseline block; per-item insight (use / avoid / surprise) with proof inline; Not tested (if any); Blockers; Claims ledger (claim, tag, source; for proof, who supplied it and what the user says it shows).
 - **Entity page:** Status; headline; disclosure line (if needed); entity facts; Blockers; Claims ledger.
-- **Thin notes:** Status; headline; context line (verbatim from the notes, no verdict; on a YMYL page, <Name> advises: "<the verbatim words>"); disclosure line (if needed); the notes' tagged advice sentences (on a YMYL page each one names the SME, Trade rule 2, which overrides this shape); baseline block (only when there are baseline facts); Blockers (BLOCKING, with the `[SME Input Needed: ...]` list, and NOTES); Claims ledger.
+- **Thin notes:** Status; headline; context line (verbatim from the notes, no verdict; omitted when the notes hold no sentence to quote; on a YMYL page, <Name> advises: "<the verbatim words>"); disclosure line (if needed); the notes' tagged advice sentences, each with every reason, condition and limit the notes give for it (on a YMYL page each one names the SME, Trade rule 2, which overrides this shape); baseline block (only when there are baseline facts); Blockers (BLOCKING, with the `[SME Input Needed: ...]` list, and NOTES); Claims ledger.
 
 ## Done
 
