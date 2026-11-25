@@ -36,7 +36,7 @@
 ### 1. Intake gate
 Ask the user: Where are the notes (source and date)? What page type? Who is the named author, and has that person approved first-person use (date and channel)? Has each named person (author, SME, reviewer) agreed to be named? Which sources give prices and metrics? Which screenshots or photos exist? Is client consent on file? Is the topic YMYL, and if so who is the qualified reviewer and what credential do they hold? Does anything need a disclosure line?
 - **No notes and no SME answer in this conversation:** STOP. Ask the questions above and write nothing until the SME answers; an answer logged under Step 8 then counts as the source. An entity page built only from a named, dated `[B]` source is exempt.
-- **Notes present but intake answers missing:** proceed. An unanswered question whose answer could change a published line becomes a marker (BLOCKING; if unsure, it blocks); an unnamed source for prices, metrics or dates always could, unless the notes state the author's own published rates with a date (Trade rule 4). Any other, such as approval when the user did not ask for first person, goes under NOTES.
+- **Notes present but intake answers missing:** proceed. An unanswered question whose answer could change a published line becomes a marker (BLOCKING; if unsure, it blocks); an unnamed source for a price, metric or date the piece states always could, unless the notes state the author's own published rates with a date (Trade rule 4). Any other, such as approval when the user did not ask for first person, goes under NOTES.
 - **Thin notes** (experiential page only; zero first-hand observations and no note saying an item was not used; if some items have observations, use the experiential shape with a marker for each missing item): deliver the Thin-notes shape with no insight section (see the worked example).
 
 ### 2. Classify and set voice
@@ -48,7 +48,7 @@ Ask the user: Where are the notes (source and date)? What page type? Who is the 
 ### 3. Redact, tag and date sources
 Apply Trade rule 1. Tag every sentence that states a fact, advice or experience, one tag per sentence (split one that mixes sources), with its tag and row ID right after it, so a multi-sentence bullet repeats them after each sentence; a tag never covers a neighbouring sentence, heading or whole step. A heading that states a fact, advice or experience, and a step title, lead-in, bold run-in title or table-row label that states a step or advice, is a sentence with its own tag. A verbatim quote of one sentence whose clauses earn the same tag from one source is one unit with one tag; any other quote (several sentences, or clauses earning different tags or sources) is paraphrased into separately tagged sentences:
 - `[N]` the SME saw or did it: a described event or result, or the note that they did not use it (first-hand, from the notes or a logged SME answer with source "SME answer, <date>"; an event the notes report from someone else is not `[N]` (a named other party's report is `[R]`), and if that party is unnamed it is `[U]`)
-- `[S]` advice, criteria, own-business terms or entity facts (Step 2) the SME stated but did not observe, including the reasons, conditions and limits given for them ("will not fix X", "some models do not allow it"), a conditional effect given as advice ("more RAM can help if ...") and a likely cause the SME gives for a symptom (a reason may be implicit: an adjacent sentence that explains why to follow the advice, such as "it is off by default" beside "turn it on", even with an unopened "see <link>" after it); never counts as experience
+- `[S]` advice, criteria, own-business terms or entity facts (Step 2) the SME stated but did not observe, including the reasons, conditions and limits given for them ("will not fix X", "some models do not allow it"), a conditional effect given as advice ("more RAM can help if ...") and a likely cause the SME gives for a symptom (a reason may be implicit: a sentence in the same paragraph, list item or answer as the advice, or directly beside it, that explains why to follow it; a sentence elsewhere in the notes, such as a later FAQ, is not implicit and stays `[U]` unless another rule applies; for example "it is off by default" beside "turn it on", even with an unopened "see <link>" after it); never counts as experience
 - `[R]` a named qualified reviewer's clearance logged under Step 8 (source "reviewer, <date>"), or the notes themselves attribute the claim to a named other party (manufacturer, supplier, client; this never satisfies Trade rule 2 or the independence Trade rule 6 requires, so a rival caution is never carried on `[R]`); name that party in the same sentence, or by role ("the owner") where Trade rule 1 bars naming a client. A hyperlink or link text alone is not attribution: the claim is `[B]` if the agent opens the linked page and it states the claim, otherwise tagged as if the link were absent
 - `[B]` baseline fact from a named public source (URL and date) that the agent opened; a rival caution on `[B]` needs a source independent of the author, the rival and any affiliate of either (Trade rule 6)
 - `[U]` unverified: a general fact the SME states (a risk, an effect, how something works) that is not observed, not attributed, and not given as advice, as a diagnosis (a likely cause for a symptom), as the reason, condition or limit (stated or implicit) for their advice, or as a warning about the reader's own risk. Those are `[S]`, unless the warning names a rival or a category of rivals (Trade rule 6). A warning is an imperative or second-person caution ("do not ...", "you risk ..."); a general statement of a risk or effect is `[U]` even when the risk is the reader's own ("Overheating can damage the battery")
@@ -61,7 +61,7 @@ Skip this step for thin notes (Step 1); their one marker covers every item. For 
 
 ### 6. Proof and stance
 - **Context or stance line** (order: Output shapes) is one sentence: the SME's own stated verdict or deciding criterion (`[S]`, or an opened `[B]` source for a rival caution), else the topic as the notes state it; never a verdict the sources below lack.
-- Place each proof item inline beside its claim, only where the user states what it shows; log that statement in the ledger row. List only the missing assets as `[ASSET: <what>]`. Never describe an asset as present unless the user supplied it. A supplied asset with no statement of what it shows is not placed; log `[SME Input Needed: what does this asset show?]`, which clears only when the user states it.
+- Place each proof item inline beside its claim, only where the user states what it shows; log that statement in the ledger row. The statement gates placement only: it creates no claim and no tag, and the claim the asset backs keeps the tag its own source earns. List only the missing assets as `[ASSET: <what>]`. Never describe an asset as present unless the user supplied it. A supplied asset with no statement of what it shows is not placed; log `[SME Input Needed: what does this asset show?]`, which clears only when the user states it.
 - A stance comes from a note, a criterion the SME stated in a note, or an answer the SME gives in this conversation, including the user relaying it (a stance only the user holds is a "user statement", stays `[U]` and cannot carry a verdict; rival cautions: Trade rule 6). When the page needs one (a comparison or a recommendation) and none exists, write `[SME Input Needed: verdict on X]`; a page that states no stance needs no marker. "It depends" is allowed only when followed by the SME's actual deciding condition.
 
 ### 7. Edit pass
@@ -100,7 +100,7 @@ Done means every Step 8 check that applies to the current State passes, the Bloc
 
 ## Worked example (thin notes)
 
-Notes (invented), the page of Sam Reed's laptop repair business, which says Sam sells repairs: no first-hand observation, no price source, a safety step (YMYL). The user has stated in this conversation that Sam agrees to be named.
+Notes (invented), the page of Sam Reed's laptop repair business, which says Sam sells repairs: no first-hand observation, no prices or metrics, a safety step (YMYL). The user has stated in this conversation that Sam agrees to be named.
 ```
 Laptop running hot? Try these checks before you book a repair.
 1. Clean the vents
@@ -122,14 +122,14 @@ Disclosure: Sam Reed sells laptop repairs. [S2]
 **2. Stop and let it cool if it is too hot to touch, Sam advises.** [S5]
 - Sam advises that a hard, flat surface may help if the vents are underneath. [S6] Sam adds that some thin laptops have no vents underneath. [S7]
 - Sam advises you ask for the cost after diagnosis rather than assuming every repair is the same. [S8] It depends on the part: a clean may be quick, while a fan replacement takes longer. [S9] Sam advises you see the Prices page. [S10]
-BLOCKING: YMYL reviewer pending; [SME Input Needed: your price bracket and its date]; [SME Input Needed: what have you seen on hot laptops?]; slop gate: not run; fact-check gate: not run
+BLOCKING: YMYL reviewer pending; [SME Input Needed: what have you seen on hot laptops?]; slop gate: not run; fact-check gate: not run
 NOTES: none.
 Ledger: one row per tagged sentence, e.g. 9 | "It depends on the part ..." | [S] | SME answer, <date>; consent to be named: Sam Reed | user statement, <date>
 Withheld: FAQ "A hard surface can help.": repeats row 6. Footer "Prices": repeats row 10.
 ```
 What it shows:
 1. Strictest version: row 6 keeps "may" and its condition, so the FAQ adds nothing row 6 lacks and is withheld as a repeat.
-2. Row 9 is the adjacent reason for row 8: `[S]`, not `[U]`.
+2. Row 9 is the reason given beside row 8 in the same list item: `[S]`, not `[U]`.
 3. Each step title and each sentence has its own tag and row ID, never one trailing tag per bullet.
 4. Footer "Prices" repeats row 10, not "no entry needed"; "Home" is navigation, no entry.
 5. A pointer to the author's own Prices page makes the page evaluate their business, so the disclosure line follows the context line (Trade rule 5), and the user's statement of consent is what lets Sam be named (Trade rule 8).
